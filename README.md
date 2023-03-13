@@ -13,7 +13,7 @@
 <br>
 
 <div align="center"> 
-<img src="/public/example_display.gif" alt="Display Image" width="80%" /> <br><br>
+<img src="/public/example_display.gif" alt="Display Image" width="90%" /> <br><br>
 </div>
 
 
