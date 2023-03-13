@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.head-shadow {
+    text-shadow: 0 0 3px #000000, 0 0 14px #000;
+}
+
+.opacity-gray{
+    background-color: rgba(128, 128, 128, 0.5);
+}
+
