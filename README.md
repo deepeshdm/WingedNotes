@@ -13,7 +13,7 @@
 <br>
 
 <div align="center"> 
-<img src="/public/example_display.gif" alt="Display Image" width="80%" /> <br><br>
+<img src="/public/example_display.gif" alt="Display Image" width="90%" /> <br><br>
 </div>
 
 
@@ -30,7 +30,23 @@ cd WingedNotes
 npm install
 ```
 
-3. Deploy project on local server
+3. Configure Firestore database on Firebase and set configs as Environment Variables.
+```
+# .env.local
+
+# Firebase Configs
+NEXT_PUBLIC_APIKEY="xxxxxxxxxxxxxxxxxxxxxxxxxxx"
+NEXT_PUBLIC_AUTHDOMAIN="xxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+NEXT_PUBLIC_PROJECTID="xxxxxxxxxxxxxxxxxxxxxx"
+NEXT_PUBLIC_STORAGEBUCKET="xxxxxxxxxxxxxxxxxxxxxxxxxxx"
+NEXT_PUBLIC_MESSAGING_SENDERID="xxxxxxxxxxxxxxxxxxxxxx"
+NEXT_PUBLIC_APPID="xxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+# JWT Secret Key
+NEXT_PUBLIC_JWT_SECRET="xxxxxxxxxxxxxxxx"
+```
+
+4. Deploy project on local server
 ```javascipt
 npm run build 
 num run start
