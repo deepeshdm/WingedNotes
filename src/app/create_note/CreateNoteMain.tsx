@@ -72,7 +72,8 @@ export default function CreateNoteMain({ PostId, forEdit, postData }:
         if (isDeleted) {
             setSnackbarState("Note Deleted Successfully !", "success", true);
             setTimeout(() => {
-                router.push("/home")
+                router.push("/home")  // go to home page
+                window.location.reload(); // refresh home page
             }, 1500)
         } else {
             setSnackbarState("Note Deletion Failed !", "error", true);
