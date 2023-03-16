@@ -15,7 +15,6 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import { RiLockPasswordLine, RiEyeLine, RiEyeOffLine } from 'react-icons/ri'
 const ralewayFont = Raleway({ weight: '700', subsets: ['latin'] });  // Import 'Raleway' Google Font
-const IntroStyles = `text-white font-bold text-3xl text-center mb-10 ${ralewayFont.className}`;
 
 //-----------------------------------------------------------------------------------------------
 
@@ -83,8 +82,10 @@ export default function LoginMain() {
 
             <div className="bg-gray-900 min-h-screen pt-7 flex flex-col items-center">
 
-                <h1 className={IntroStyles}> Login Account </h1>
-                <div className="flex flex-col w-1/4">
+                <h1 className={`text-white font-bold text-2xl md:text-3xl text-center mb-5 md:mb-10 ${ralewayFont.className}`}>
+                    Account Login 
+                </h1>
+                <div className="flex flex-col w-3/4 min-[500px]:max-sm:w-3/5 sm:w-2/4 md:w-2/5 lg:w-1/4">
                     <label className="text-slate-700 text-sm ml-2 mb-1"> Registered Username </label>
                     <div className="flex items-center bg-slate-800 hover:bg-slate-700 rounded-md mb-5">
                         <FaRegUser className="ml-3 text-slate-500 h-4 w-4" />
@@ -94,7 +95,7 @@ export default function LoginMain() {
                 </div>
 
 
-                <div className="flex flex-col w-1/4">
+                <div className="flex flex-col w-3/4  min-[500px]:max-sm:w-3/5 sm:w-2/4 md:w-2/5 lg:w-1/4">
                     <label className="text-slate-700 text-sm ml-2 mb-1"> Password </label>
                     <div className="flex items-center bg-slate-800 hover:bg-slate-700 rounded-md">
                         <RiLockPasswordLine className="ml-3 text-slate-500 h-6 w-6" />
@@ -108,7 +109,7 @@ export default function LoginMain() {
                 </div>
 
 
-                <FormGroup className="mr-52 mt-2">
+                <FormGroup className="mt-2">
                     <FormControlLabel control={<Checkbox {...label} defaultChecked sx={{ color: pink[800], '&.Mui-checked': { color: pink[600] } }}
                         onChange={(event: React.ChangeEvent<HTMLInputElement>) => { setStayLoggedIn(event.target.checked) }} />}
                         className="text-slate-500 text-base" label="Stay Logged In" />
@@ -116,7 +117,7 @@ export default function LoginMain() {
 
 
                 <button onClick={loginHandler}
-                    className="h-14 max-h-14 w-40  bg-sky-500 text-white font-bold px-14 py-4 mt-3 rounded-md hover:bg-sky-600 active:bg-sky-700">
+                    className="h-14 max-h-14 w-40  bg-sky-500 text-white font-bold px-14 py-4 mt-6 rounded-md hover:bg-sky-600 active:bg-sky-700">
                     {loginClicked ? <ClipLoader color="#ffffff" loading={true} size={30} /> : "LOGIN"}
                 </button>
 

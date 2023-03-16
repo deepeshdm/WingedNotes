@@ -1,12 +1,17 @@
+
+'use client'
+
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Raleway } from "@next/font/google";
+import { usePathname } from 'next/navigation';
 // Import 'Raleway' Google Font
 const ralewayFont = Raleway({ weight: '700', subsets: ['latin'] });
 
 export default function Navbar() {
 
+    const currentPath = usePathname();
     const headStyles = `text-white text-2xl ${ralewayFont.className}`;
 
     return (
@@ -21,12 +26,16 @@ export default function Navbar() {
                         </div>
                     </Link>
                     <nav className="flex space-x-4">
-                        <Link href="/login" className="text-gray-300 hover:text-white">
-                            Login
-                        </Link>
-                        <Link href="/signup" className="text-gray-300 hover:text-white">
-                            Signup
-                        </Link>
+                        {currentPath == "/signup" ?
+                            <Link href="/login" className="text-gray-300 hover:text-white">
+                                Login
+                            </Link>
+                            : null}
+                        {currentPath == "/login" ?
+                            <Link href="/signup" className="text-gray-300 hover:text-white">
+                                Signup
+                            </Link>
+                            : null}
                     </nav>
                 </div>
 
