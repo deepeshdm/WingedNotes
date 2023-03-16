@@ -48,10 +48,10 @@ export default function Home() {
 
 
           <div className="flex space-x-10 mt-14 max-sm:flex-col max-sm:space-x-0 max-sm:space-y-5">
-            <Link href="/login" className="bg-gradient-to-r from-purple-400 to-pink-500 hover:from-pink-500 hover:to-purple-600 active:from-pink-600 active:to-purple-700 text-white text-lg font-semibold py-3 px-8 rounded-md shadow-md transition duration-300">
+            <Link href="/login" className="bg-gradient-to-r from-purple-400 to-pink-500 hover:from-pink-500 hover:to-purple-600 active:from-pink-600 active:to-purple-700 text-white text-center text-lg font-semibold py-3 px-8 rounded-md shadow-md transition duration-300">
               LOGIN
             </Link>
-            <Link href="/signup" className="bg-gradient-to-r from-teal-400 to-blue-500 hover:from-teal-500 hover:to-blue-600 active:from-teal-600 active:to-blue-700 text-white text-lg font-semibold py-3 px-8 rounded-md shadow-md transition duration-300">
+            <Link href="/signup" className="bg-gradient-to-r from-teal-400 to-blue-500 hover:from-teal-500 hover:to-blue-600 active:from-teal-600 active:to-blue-700 text-white text-center text-lg font-semibold py-3 px-8 rounded-md shadow-md transition duration-300">
               REGISTER
             </Link>
           </div>
