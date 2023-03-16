@@ -11,7 +11,7 @@ export default function SignupDialogbox({ username, RegisterNewUser, setButtonAc
     return (
         <>
             <div className="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 flex justify-center items-center">
-                <div className="bg-white w-fit p-5 rounded-md shadow-lg">
+                <div className="bg-white w-fit p-5 rounded-md shadow-lg m-7">
                     <p className="text-lg font-semibold mb-4"> Register Account for <span className="font-bold">"{username}"</span> ? 👤</p>
 
                     <div className="flex items-center bg-red-200 rounded-md px-5 py-3">
