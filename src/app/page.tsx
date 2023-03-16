@@ -33,10 +33,10 @@ export default function Home() {
       <div id="main-content" className="absolute top-0 left-0 h-full w-full flex flex-col items-center justify-center select-none">
 
         <div className="flex flex-col items-center justify-center bg-gray-700 bg-opacity-70 rounded-md shadow-md
-          pt-8 pb-4 px-5      sm:px-10 sm:pt-14 ">
+          mx-10 pt-8 pb-4 px-5 sm:px-10 sm:pt-14 ">
 
           <div className="flex space-x-2 items-center max-sm:flex-col max-sm:space-y-2">
-            <Image src="/memo_emoji.png" alt="" width={90} height={90} className="mr-1" />
+            <Image src="/memo_emoji.png" alt="" width={90} height={90} className="ml-7 sm:mr-1" />
             <h1 className={`text-white font-bold text-4xl sm:text-5xl md:text-6xl head-shadow ${ralewayFont.className}`}>
               Winged<span className="text-sky-500">NOTES</span>
             </h1>
