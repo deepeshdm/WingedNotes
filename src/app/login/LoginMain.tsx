@@ -82,7 +82,7 @@ export default function LoginMain() {
 
             <div className="bg-gray-900 min-h-screen pt-7 flex flex-col items-center">
 
-                <h1 className={`text-gray-300 font-bold text-2xl md:text-3xl text-center mb-5 md:mb-10 ${ralewayFont.className}`}>
+                <h1 className={`text-gray-400 font-bold text-2xl md:text-3xl text-center mb-5 md:mb-10 ${ralewayFont.className}`}>
                     Account Login 
                 </h1>
                 <div className="flex flex-col w-3/4 min-[500px]:max-sm:w-3/5 sm:w-2/4 md:w-2/5 lg:w-1/4">

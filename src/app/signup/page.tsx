@@ -106,11 +106,11 @@ export default function SignUp() {
 
       <div className="bg-gray-900 min-h-screen">
 
-        <h1 className={`text-white font-bold text-center text-2xl py-5 sm:text-3xl ${ralewayFont.className}`}> 
+        <h1 className={`text-gray-400 font-bold text-center text-2xl py-5 sm:text-3xl ${ralewayFont.className}`}> 
         Create Account 
         </h1>
 
-        <div className=" flex flex-col gap-y-4 mx-20 sm:mx-36 md:mx-28 lg:mx-36 xl:mx-96
+        <div className=" flex flex-col gap-y-4 mx-16 sm:mx-36 md:mx-28 lg:mx-36 xl:mx-96
           md:grid md:grid-cols-2 md:gap-x-16 md:gap-y-5">
           <InputFields showPassword={showPassword} setFirstname={setFirstname} setLastname={setLastname} setUsername={setUsername}
             setsocialLink={setsocialLink} setshowPassword={setshowPassword} setPasswordInput={setPasswordInput} setCPasswordInput={setCPasswordInput} />
