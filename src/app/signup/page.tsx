@@ -13,8 +13,6 @@ import InputFields from "./InputFields";
 import SignupDialogbox from "./SignupDialogbox";
 import { registerUser, userExists } from '../../db_utils'
 const ralewayFont = Raleway({ weight: '700', subsets: ['latin'] });  // Import 'Raleway' Google Font
-const IntroStyles = `text-white font-bold text-3xl text-center mb-10 ${ralewayFont.className}`;
-
 
 //-------------------------------------------------------------------------------------------------------
 
@@ -108,9 +106,11 @@ export default function SignUp() {
 
       <div className="bg-gray-900 min-h-screen">
 
-        <h1 className={IntroStyles}> Create Account </h1>
+        <h1 className={`text-white font-bold text-center text-2xl py-5 sm:text-3xl ${ralewayFont.className}`}> 
+        Create Account 
+        </h1>
 
-        <div className=" flex flex-col gap-y-4  mx-44 md:mx-28 lg:mx-36 xl:mx-96
+        <div className=" flex flex-col gap-y-4 mx-20 sm:mx-36 md:mx-28 lg:mx-36 xl:mx-96
           md:grid md:grid-cols-2 md:gap-x-16 md:gap-y-5">
           <InputFields showPassword={showPassword} setFirstname={setFirstname} setLastname={setLastname} setUsername={setUsername}
             setsocialLink={setsocialLink} setshowPassword={setshowPassword} setPasswordInput={setPasswordInput} setCPasswordInput={setCPasswordInput} />
@@ -122,7 +122,7 @@ export default function SignUp() {
             className="h-14 max-h-14 w-44 bg-sky-500 text-white font-bold px-14 py-4 mt-10 rounded-md hover:bg-sky-600 active:bg-sky-700 ">
             {signupClicked ? <ClipLoader color="#ffffff" loading={true} size={30} /> : "SIGNUP"}
           </button>
-          <div>
+          <div className="pb-20">
             <p className="text-slate-500 text-center text-base mt-10"> Already have registered account ? </p>
             <Link href="/login">
               <p className="text-white text-center text-lg font-semibold hover:font-bold"> Login here </p>
