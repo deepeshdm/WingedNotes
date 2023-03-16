@@ -89,7 +89,8 @@ export default function ProfileMain({ LoggedInUser, userDoc }: ProfileProps) {
                     <p className='text-2xl mb-8 font-semibold text-white'> Account Details </p>
                 </div>
 
-                <div className="grid grid-cols-2 gap-x-12 gap-y-5 mx-[410px]">
+                <div className="pb-20 flex flex-col gap-y-3 mx-20 sm:mx-32 lg:mx-72
+                md:grid md:grid-cols-2 md:gap-x-12 md:gap-y-6 ">
                     <UserFields Firstname={userDoc?.Firstname} Lastname={userDoc?.Lastname} OnChangeHandler={handleInputChange}
                         Username={userDoc?.Username} socialMediaLink={userDoc?.socialMediaLink} />
                     <button disabled={disableButton} onClick={UpdateInputFields}
