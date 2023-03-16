@@ -109,7 +109,9 @@ export default function SignUp() {
       <div className="bg-gray-900 min-h-screen">
 
         <h1 className={IntroStyles}> Create Account </h1>
-        <div className="grid grid-cols-2 gap-x-16 gap-y-5 font-semibold mx-96">
+
+        <div className=" flex flex-col gap-y-4  mx-44 md:mx-28 lg:mx-36 xl:mx-96
+          md:grid md:grid-cols-2 md:gap-x-16 md:gap-y-5">
           <InputFields showPassword={showPassword} setFirstname={setFirstname} setLastname={setLastname} setUsername={setUsername}
             setsocialLink={setsocialLink} setshowPassword={setshowPassword} setPasswordInput={setPasswordInput} setCPasswordInput={setCPasswordInput} />
         </div>
