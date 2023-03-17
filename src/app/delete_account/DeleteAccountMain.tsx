@@ -112,15 +112,15 @@ export default function DeleteAccountMain() {
             <HomeNavbar LoggedInUser={LoggedInUser} />
             <div className="bg-gray-900 min-h-screen flex flex-col items-center">
 
-                <p className={`text-2xl mb-1 text-white ${ralewayFont.className}`}> Delete Account Permanently </p>
-                <p className={`text-white text-center font-light mx-72 ${robotoFont.className}`}>
+                <p className={`text-2xl mb-1 max-md:mt-5 text-white ${ralewayFont.className}`}> Delete Account Permanently </p>
+                <p className={`text-white text-center font-light text-sm sm:text-base mx-16 lg:mx-44 min-[1100px]:mx-72 ${robotoFont.className}`}>
                     Before proceeding, please ensure that you have exported or saved any important data that you wish to keep.
                     Deleting your account will also delete all notes associated with it and it cannot be recovered.
                 </p>
                 <Image src="/inbox_cleanup.svg" alt=" " width={370} height={370} />
 
 
-                <div className='flex items-center gap-10'>
+                <div className='flex flex-col sm:flex-row items-center gap-x-10 gap-y-5'>
 
                     <div className="flex items-center bg-slate-800 hover:bg-slate-700 rounded-md">
                         <RiLockPasswordLine className="ml-3 text-slate-500 h-6 w-6" />
@@ -149,7 +149,7 @@ export default function DeleteAccountMain() {
                 </div>
 
                 <div onClick={deleteAccountHandler}
-                    className="flex items-end py-4 px-5 mt-6 rounded-md bg-red-500 hover:bg-red-600 active:bg-red-700 cursor-pointer select-none">
+                    className="flex items-end py-4 px-5 mt-6 mb-20 rounded-md bg-red-500 hover:bg-red-600 active:bg-red-700 cursor-pointer select-none">
                     <span className='text-white text-base font-semibold'> DELETE ACCOUNT </span>
                     <span className="ml-3"> <MdDelete className='w-6 h-6 text-white' /> </span>
                 </div>
