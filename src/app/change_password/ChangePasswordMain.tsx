@@ -103,12 +103,13 @@ export default function ChangePasswordMain() {
     return (
         <>
             <HomeNavbar LoggedInUser={LoggedInUser} />
+
             <div className="bg-gray-900 min-h-screen pt-7 flex flex-col items-center">
 
                 <FaLock className='text-white mb-3 w-7 h-7' />
                 <p className='text-2xl mb-8 font-semibold text-white'> Change Account Password </p>
 
-                <div className="flex items-center w-1/4 bg-slate-800 hover:bg-slate-700 rounded-md mb-5">
+                <div className="flex items-center  bg-slate-800 hover:bg-slate-700 rounded-md mb-5">
                     <RiLockPasswordLine className="ml-3 text-slate-500 h-6 w-6" />
                     <input placeholder="Enter Old Password" type={showOldPassword ? 'text' : 'password'}
                         onChange={(e) => setOldPassword(String(e.target.value))} maxLength={64}
@@ -120,7 +121,7 @@ export default function ChangePasswordMain() {
                 </div>
 
 
-                <div className="flex items-center w-1/4 bg-slate-800 hover:bg-slate-700 rounded-md mb-5">
+                <div className="flex items-center  bg-slate-800 hover:bg-slate-700 rounded-md mb-5">
                     <RiLockPasswordLine className="ml-3 text-slate-500 h-6 w-6" />
                     <input placeholder="Enter New Password" type={showNewPassword ? 'text' : 'password'}
                         onChange={(e) => setNewPassword(String(e.target.value))} maxLength={64}
@@ -132,7 +133,7 @@ export default function ChangePasswordMain() {
                 </div>
 
 
-                <div className="flex items-center w-1/4 bg-slate-800 hover:bg-slate-700 rounded-md mb-5">
+                <div className="flex items-center bg-slate-800 hover:bg-slate-700 rounded-md mb-5">
                     <RiLockPasswordLine className="ml-3 text-slate-500 h-6 w-6" />
                     <input placeholder="Confirm New Password" type={showNewPassword ? 'text' : 'password'}
                         onChange={(e) => setConfirmNewPassword(String(e.target.value))} maxLength={64}
