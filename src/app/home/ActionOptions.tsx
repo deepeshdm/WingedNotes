@@ -78,20 +78,21 @@ export default function ActionOptions({ TotalNotes, LoggedInUser }: { TotalNotes
 
     return (
         <>
-            <div className="flex items-center justify-between text-white mb-3 
-            mx-10 md:mx-24 lg:mx-60">
-                <div className="flex items-center">
+            <div className="flex items-center justify-between text-white mb-4 mt-3
+            mx-20 sm:mx-12 lg:mx-60">
+                <div className="flex items-center max-[600px]:hidden ">
                     <span>(Total {numNotes} Notes)</span>
                 </div>
                 <div className="flex items-end">
                     <span onClick={() => router.push("/create_note")} className="mr-1 pb-1 cursor-pointer">
                         <IoIosCreate className='w-6 h-6' /> </span>
                     <button onClick={() => router.push("/create_note")}
-                        className="hover:bg-slate-700 active:bg-slate-600 px-2 py-1 rounded-md cursor-pointer select-none">
+                        className="hover:bg-slate-700 active:bg-slate-600 px-2 py-1 rounded-md cursor-pointer select-none max-[450px]:text-xs">
                         Create Note </button>
                     <span className="mr-1 pb-1 ml-10"> <MdDelete className='w-6 h-6 text-red-500' /> </span>
                     <button onClick={() => setDeleteAllClicked(true)} disabled={numNotes < 1}
-                        className="hover:bg-slate-700 active:bg-slate-600 px-2 py-1 rounded-md cursor-pointer select-none disabled:opacity-60 disabled:cursor-not-allowed ">
+                        className="hover:bg-slate-700 active:bg-slate-600 px-2 py-1 rounded-md cursor-pointer select-none disabled:opacity-60 disabled:cursor-not-allowed 
+                        max-[450px]:text-xs max-[600px]:float-right">
                         Delete All
                     </button>
                 </div>
@@ -100,8 +101,8 @@ export default function ActionOptions({ TotalNotes, LoggedInUser }: { TotalNotes
             {/* Show DeleteAll Confirmation DialogBox */}
             {deleteAllClicked &&
                 <DeleteDialogbox numNotes={numNotes} deleteAllHandler={deleteAllHandler}
-                showPassword={showPassword} setshowPassword={setshowPassword}
-                setPasswordInput={setPasswordInput} setDeleteAllClicked={setDeleteAllClicked} />
+                    showPassword={showPassword} setshowPassword={setshowPassword}
+                    setPasswordInput={setPasswordInput} setDeleteAllClicked={setDeleteAllClicked} />
             }
 
             {/* Show Loading Spinner when Deleting All Posts */}
