@@ -78,9 +78,10 @@ export default function ActionOptions({ TotalNotes, LoggedInUser }: { TotalNotes
 
     return (
         <>
-            <div className="flex items-center justify-between text-white mb-3 mx-60">
+            <div className="flex items-center justify-between text-white mb-3 
+            mx-10 md:mx-24 lg:mx-60">
                 <div className="flex items-center">
-                    <span>All Notes (Total {numNotes} Notes)</span>
+                    <span>(Total {numNotes} Notes)</span>
                 </div>
                 <div className="flex items-end">
                     <span onClick={() => router.push("/create_note")} className="mr-1 pb-1 cursor-pointer">
