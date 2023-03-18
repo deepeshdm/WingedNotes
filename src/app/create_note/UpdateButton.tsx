@@ -28,7 +28,8 @@ export const UpdateButton = ({ noteData, postId, loggedInUser, disableUpdateButt
             <button
                 onClick={OnClickHandler}
                 disabled={disableUpdateButton}
-                className="ml-10 bg-sky-500 text-white font-bold px-7 py-2 rounded-md hover:bg-sky-600 active:bg-sky-700 disabled:opacity-50 disabled:cursor-not-allowed">
+                className="ml-10 bg-sky-500 text-white font-bold px-7 py-2 rounded-md hover:bg-sky-600 active:bg-sky-700 
+                disabled:opacity-50 disabled:cursor-not-allowed max-[500px]:px-4 max-[500px]:ml-5">
                 UPDATE
             </button>
 

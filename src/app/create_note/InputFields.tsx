@@ -34,7 +34,7 @@ export const TitleInput = ({ noteData, setNoteData, children, setDisableUpdateBu
 
     return (
         <div className="flex items-center">
-            <div className="flex flex-col min-w-[80%]">
+            <div className="flex flex-col min-w-[50%] sm:min-w-[65%] lg:min-w-[75%] xl:min-w-[80%]">
                 <input onChange={OnChangeHandler} defaultValue={noteData.title}
                 placeholder="Enter Title Here......"
                 className={`bg-slate-800 rounded-md text-zinc-400 text-md focus:outline-none px-5 pt-3 pb-1 resize-none line-clamp-1 ${robotoTitleFont.className}`}/>
@@ -42,7 +42,7 @@ export const TitleInput = ({ noteData, setNoteData, children, setDisableUpdateBu
             </div>
 
             {children}
-            <span className="ml-6">
+            <span className="ml-6 max-[500px]:ml-3">
                 <MdDelete onClick={deleteIconHandler} className='w-9 h-10 text-red-500 hover:text-red-600 active:text-red-500' />
             </span>
         </div>
