@@ -22,14 +22,23 @@ export default function Navbar({ LoggedInUser }: { LoggedInUser?: string }) {
                         </div>
 
                     </Link>
+
                     <nav className="flex space-x-4">
-                        <Link href="/home" className="text-gray-300 hover:text-white text-lg max-sm:mr-5">
-                            All Notes
-                        </Link>
+
+                        <span className='max-sm:mr-5 max-[450px]:hidden'>
+                            <Link href="/home" className="text-gray-300 hover:text-white text-lg">
+                                All Notes
+                            </Link>
+                        </span>
+
                         <span className='text-gray-300 text-lg max-sm:hidden'>  {LoggedInUser}  </span>
-                        <Link href="/profile" className="text-gray-300 hover:text-white">
-                            <FaUserCircle className='w-6 h-6' />
-                        </Link>
+
+                        <span>
+                            <Link href="/profile" className="text-gray-300 hover:text-white">
+                                <FaUserCircle className='w-6 h-6 max-[450px]:w-7 max-[450px]:h-7' />
+                            </Link>
+                        </span>
+
                     </nav>
 
                 </div>

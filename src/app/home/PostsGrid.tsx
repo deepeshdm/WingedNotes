@@ -29,8 +29,8 @@ export default async function PostsGrid({ posts }: { posts: Post[] }) {
 
     return (
         <>
-            <div className='flex flex-col gap-y-7 sm:grid sm:grid-cols-3 sm:gap-x-10 pb-20 
-            mx-20 sm:mx-10 md:mx-24 lg:mx-60'>
+            <div className='flex flex-col gap-y-7 sm:grid sm:grid-cols-3 sm:gap-x-10 pb-20
+            mx-8 sm:mx-10 lg:mx-32 min-[1200px]:mx-60'>
                 {posts.map((post) => (
                     <Post key={post.id} post={post} />
                 ))}
