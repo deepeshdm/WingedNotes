@@ -89,13 +89,13 @@ export default function ActionOptions({ TotalNotes, LoggedInUser }: { TotalNotes
                         <IoIosCreate className='w-6 h-6' /> 
                     </span>
                     <button onClick={() => router.push("/create_note")}
-                        className="hover:bg-slate-700 active:bg-slate-600 px-2 py-1 rounded-md cursor-pointer select-none max-[470px]:text-sm">
+                        className="hover:bg-slate-700 active:bg-slate-600 px-2 py-1 rounded-md cursor-pointer select-none max-[470px]:text-sm whitespace-nowrap">
                         Create Note 
                     </button>
                     <span className="mr-1 pb-1 ml-10 max-[500px]:ml-36"> <MdDelete className='w-6 h-6 text-red-500' /> </span>
                     <button onClick={() => setDeleteAllClicked(true)} disabled={numNotes < 1}
                         className="hover:bg-slate-700 active:bg-slate-600 px-2 py-1 rounded-md cursor-pointer select-none disabled:opacity-60 
-                        disabled:cursor-not-allowed max-[470px]:text-sm
+                        disabled:cursor-not-allowed max-[470px]:text-sm whitespace-nowrap
                         mr-10 md:mr-14 lg:mr-36 min-[1200px]:mr-64">
                         Delete All
                     </button>
