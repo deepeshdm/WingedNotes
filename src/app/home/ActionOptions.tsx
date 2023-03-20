@@ -78,24 +78,29 @@ export default function ActionOptions({ TotalNotes, LoggedInUser }: { TotalNotes
 
     return (
         <>
-            <div className="flex items-center justify-between text-white mb-4 mt-3
-            mx-20 sm:mx-12 lg:mx-60">
-                <div className="flex items-center max-[600px]:hidden ">
+            <div className="flex items-center justify-between text-white mb-4 mt-3">
+
+                <div className="flex items-start max-[500px]:hidden ml-10 md:ml-14 lg:ml-36 min-[1200px]:ml-64">
                     <span>(Total {numNotes} Notes)</span>
                 </div>
+
                 <div className="flex items-end">
-                    <span onClick={() => router.push("/create_note")} className="mr-1 pb-1 cursor-pointer">
-                        <IoIosCreate className='w-6 h-6' /> </span>
+                    <span onClick={() => router.push("/create_note")} className="mr-1 pb-1 cursor-pointer max-[500px]:ml-10">
+                        <IoIosCreate className='w-6 h-6' /> 
+                    </span>
                     <button onClick={() => router.push("/create_note")}
-                        className="hover:bg-slate-700 active:bg-slate-600 px-2 py-1 rounded-md cursor-pointer select-none max-[450px]:text-xs">
-                        Create Note </button>
-                    <span className="mr-1 pb-1 ml-10"> <MdDelete className='w-6 h-6 text-red-500' /> </span>
+                        className="hover:bg-slate-700 active:bg-slate-600 px-2 py-1 rounded-md cursor-pointer select-none max-[470px]:text-sm">
+                        Create Note 
+                    </button>
+                    <span className="mr-1 pb-1 ml-10 max-[500px]:ml-36"> <MdDelete className='w-6 h-6 text-red-500' /> </span>
                     <button onClick={() => setDeleteAllClicked(true)} disabled={numNotes < 1}
-                        className="hover:bg-slate-700 active:bg-slate-600 px-2 py-1 rounded-md cursor-pointer select-none disabled:opacity-60 disabled:cursor-not-allowed 
-                        max-[450px]:text-xs max-[600px]:float-right">
+                        className="hover:bg-slate-700 active:bg-slate-600 px-2 py-1 rounded-md cursor-pointer select-none disabled:opacity-60 
+                        disabled:cursor-not-allowed max-[470px]:text-sm
+                        mr-10 md:mr-14 lg:mr-36 min-[1200px]:mr-64">
                         Delete All
                     </button>
                 </div>
+
             </div>
 
             {/* Show DeleteAll Confirmation DialogBox */}
