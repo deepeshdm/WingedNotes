@@ -34,7 +34,7 @@ export const TitleInput = ({ noteData, setNoteData, children, setDisableUpdateBu
 
     return (
         <div className="flex items-center">
-            <div className="flex flex-col min-w-[50%] sm:min-w-[65%] lg:min-w-[75%] xl:min-w-[80%]">
+            <div className="flex flex-col w-[60%] sm:w-[65%] md:w-[75%] lg:w-[79%] min-[1200px]:w-[83%] xl:min-w-[83%]">
                 <input onChange={OnChangeHandler} defaultValue={noteData.title}
                 placeholder="Enter Title Here......"
                 className={`bg-slate-800 rounded-md text-zinc-400 text-md focus:outline-none px-5 pt-3 pb-1 resize-none line-clamp-1 ${robotoTitleFont.className}`}/>
