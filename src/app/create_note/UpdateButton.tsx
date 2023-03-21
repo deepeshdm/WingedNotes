@@ -31,7 +31,7 @@ export const UpdateButton = ({ noteData, postId, loggedInUser, disableUpdateButt
 
     if (isSmallScreen) {
         return (
-          <div className="ml-8 max-[500px]:px-4 max-[500px]:ml-5">
+          <div className="max-[500px]:px-4 max-[500px]:ml-4">
             <BsFillArrowUpSquareFill
               className="text-sky-500 hover:text-sky-600 active:text-sky-500 cursor-pointer w-9 h-8"
             />
