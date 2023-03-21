@@ -87,7 +87,7 @@ export default function CreateNoteMain({ PostId, forEdit, postData }:
         <>
             <div className="bg-gray-900 min-h-screen">
                 <HomeNavbar LoggedInUser={loggedUser} />
-                <div className="mx-12 md:mx-20 mt-10 pb-16 flex flex-col gap-y-5">
+                <div className="mx-7 sm:mx-10 lg:mx-20 mt-10 pb-16 flex flex-col gap-y-5">
                     <TitleInput noteData={noteData} setNoteData={setNoteData} setDisableUpdateButton={setDisableUpdateButton}
                         setDeleteIconClicked={setDeleteIconClicked}>
                         <UpdateButton noteData={noteData} postId={PostId} loggedInUser={loggedUser} disableUpdateButton={disableUpdateButton}
