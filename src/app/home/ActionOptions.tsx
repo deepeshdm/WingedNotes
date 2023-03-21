@@ -86,23 +86,25 @@ export default function ActionOptions({ TotalNotes, LoggedInUser }: { TotalNotes
 
                 <div className="flex items-end">
                     <span onClick={() => router.push("/create_note")} className="mr-1 pb-1 cursor-pointer max-[500px]:ml-10">
-                        <IoIosCreate className='w-6 h-6' /> 
+                        <IoIosCreate className='w-6 h-6' />
                     </span>
                     <button onClick={() => router.push("/create_note")}
-                        className="hover:bg-slate-700 active:bg-slate-600 px-2 py-1 rounded-md cursor-pointer select-none max-[470px]:text-sm whitespace-nowrap">
-                        Create Note 
+                        className="hover:bg-slate-700 active:bg-slate-600 px-2 py-1 rounded-md whitespace-nowrap
+                        cursor-pointer select-none max-[470px]:text-sm">
+                        Create Note
                     </button>
-                    <span className="mr-1 pb-1 ml-10 max-[500px]:ml-36"> <MdDelete className='w-6 h-6 text-red-500' /> </span>
+                    <span className="mr-1 pb-1 ml-20 min-[400px]:ml-28  min-[450px]:ml-40 min-[500px]:ml-5"> <MdDelete className='w-6 h-6 text-red-500' /> </span>
                     <button onClick={() => setDeleteAllClicked(true)} disabled={numNotes < 1}
                         className="hover:bg-slate-700 active:bg-slate-600 px-2 py-1 rounded-md cursor-pointer select-none disabled:opacity-60 
                         disabled:cursor-not-allowed max-[470px]:text-sm whitespace-nowrap
-                        mr-10 md:mr-14 lg:mr-36 min-[1200px]:mr-64">
+                        min-[500px]:mr-10 lg:mr-36 min-[1200px]:mr-64">
                         Delete All
                     </button>
                 </div>
 
             </div>
 
+            {/* Show DeleteAll Confirmation DialogBox */}
             {/* Show DeleteAll Confirmation DialogBox */}
             {deleteAllClicked &&
                 <DeleteDialogbox numNotes={numNotes} deleteAllHandler={deleteAllHandler}
