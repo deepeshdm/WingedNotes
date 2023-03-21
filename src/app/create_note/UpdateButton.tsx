@@ -1,6 +1,10 @@
 
+'use client'
+
 import { updatePost } from '@/db_utils';
 import { AlertColor } from '@mui/material';
+import {BsFillArrowUpSquareFill} from "react-icons/bs"
+import {useMediaQuery} from '@mui/material';
 
 type ButtonProps = {
     noteData: { title: string; body: string },
@@ -14,6 +18,8 @@ type ButtonProps = {
 
 export const UpdateButton = ({ noteData, postId, loggedInUser, disableUpdateButton, setDisableUpdateButton, setSnackbarState }: ButtonProps) => {
 
+    const isSmallScreen = useMediaQuery('(max-width:450px)');
+
     // Update the state to Database when Update Button clicked
     const OnClickHandler = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         console.log("Updating the Post !")
@@ -23,13 +29,23 @@ export const UpdateButton = ({ noteData, postId, loggedInUser, disableUpdateButt
         console.log("Post updated successfully !")
     }
 
+    if (isSmallScreen) {
+        return (
+          <div className="ml-8 max-[500px]:px-4 max-[500px]:ml-5">
+            <BsFillArrowUpSquareFill
+              className="text-sky-500 hover:text-sky-600 active:text-sky-500 cursor-pointer w-9 h-8"
+            />
+          </div>
+        );
+      }
+
     return (
         <>
             <button
                 onClick={OnClickHandler}
                 disabled={disableUpdateButton}
-                className="ml-10 bg-sky-500 text-white font-bold px-7 py-2 rounded-md hover:bg-sky-600 active:bg-sky-700 
-                disabled:opacity-50 disabled:cursor-not-allowed max-[500px]:px-4 max-[500px]:ml-5">
+                className=" bg-sky-500 text-white font-bold px-7 py-2 rounded-md hover:bg-sky-600 active:bg-sky-700 
+                disabled:opacity-50 disabled:cursor-not-allowed ml-8 max-[500px]:px-4 max-[500px]:ml-5">
                 UPDATE
             </button>
 

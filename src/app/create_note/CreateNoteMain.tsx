@@ -14,7 +14,6 @@ import SnackBar from '../components/SnackBar';
 import { TitleInput, NoteInput } from './InputFields';
 import { UpdateButton } from './UpdateButton';
 
-
 // NOTE : The 'forEdit' and 'postData' are only passed when coming from '/edit_note' to enable editing of note.
 export default function CreateNoteMain({ PostId, forEdit, postData }:
     { PostId: string, forEdit?: boolean, postData?: DocumentData }) {
