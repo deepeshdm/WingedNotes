@@ -112,12 +112,13 @@ export default function DeleteAccountMain() {
             <HomeNavbar LoggedInUser={LoggedInUser} />
             <div className="bg-gray-900 min-h-screen flex flex-col items-center">
 
-                <p className={`text-2xl mb-1 max-md:mt-5 text-white ${ralewayFont.className}`}> Delete Account Permanently </p>
-                <p className={`text-white text-center font-light text-sm sm:text-base mx-16 lg:mx-44 min-[1100px]:mx-72 ${robotoFont.className}`}>
+                <p className={`max-sm:text-xl text-2xl mb-1 max-lg:mt-5 text-white ${ralewayFont.className}`}> Delete Account Permanently </p>
+                <p className={`text-white text-center font-light max-sm:text-xs text-sm sm:text-base mx-5 min-[500px]:mx-14 lg:mx-44 min-[1100px]:mx-72 ${robotoFont.className}`}>
                     Before proceeding, please ensure that you have exported or saved any important data that you wish to keep.
                     Deleting your account will also delete all notes associated with it and it cannot be recovered.
                 </p>
-                <Image src="/inbox_cleanup.svg" alt=" " width={370} height={370} />
+
+                <Image src="/inbox_cleanup.svg" alt=" " width={350} height={350} />
 
 
                 <div className='flex flex-col sm:flex-row items-center gap-x-10 gap-y-5'>
