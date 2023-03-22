@@ -93,7 +93,7 @@ export default function ActionOptions({ TotalNotes, LoggedInUser }: { TotalNotes
                         cursor-pointer select-none max-[470px]:text-sm">
                         Create Note
                     </button>
-                    <span className="mr-1 pb-1 ml-12 min-[350px]:ml-16 min-[400px]:ml-28  min-[450px]:ml-40 min-[500px]:ml-5"> <MdDelete className='w-6 h-6 text-red-500' /> </span>
+                    <span className="mr-1 pb-1 ml-1 min-[310px]:ml-5 min-[350px]:ml-16 min-[400px]:ml-28  min-[450px]:ml-40 min-[500px]:ml-5"> <MdDelete className='w-6 h-6 text-red-500' /> </span>
                     <button onClick={() => setDeleteAllClicked(true)} disabled={numNotes < 1}
                         className="hover:bg-slate-700 active:bg-slate-600 px-2 py-1 rounded-md cursor-pointer select-none disabled:opacity-60 
                         disabled:cursor-not-allowed max-[470px]:text-sm whitespace-nowrap

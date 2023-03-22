@@ -18,7 +18,7 @@ export default function DeleteDialogbox({ numNotes, showPassword, setPasswordInp
     return (
         <>
             <div className="z-50 fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 flex justify-center items-center">
-                <div className="bg-white w-96 p-5 rounded-md shadow-lg">
+                <div className="bg-white p-5 rounded-md shadow-lg max-[340px]:m-5 m-10 min-[500px]:m-7">
                     <p className="text-lg font-semibold mb-4"> Do you want to delete ALL {<span className='text-lg font-bold text-red-500'> {numNotes} </span>} Notes ? 🤯 </p>
 
                     <div className="mb-4">
@@ -35,8 +35,8 @@ export default function DeleteDialogbox({ numNotes, showPassword, setPasswordInp
                     </div>
 
                     <div className="mt-10">
-                        <button className="bg-red-500 hover:bg-red-600 active:bg-red-500 text-white px-4 py-2 rounded-md mr-3" onClick={deleteAllHandler}> DELETE ALL NOTES </button>
-                        <button className="bg-gray-300 hover:bg-gray-400 active:bg-gray-300 text-gray-800 px-4 py-2 rounded-md float-right" onClick={() => setDeleteAllClicked(false)}> CANCEL </button>
+                        <button className="bg-red-500 hover:bg-red-600 active:bg-red-500 text-white max-[400px]:text-xs max-[400px]:px-2 px-4 py-2 rounded-md mr-3" onClick={deleteAllHandler}> DELETE ALL NOTES </button>
+                        <button className="bg-gray-300 hover:bg-gray-400 active:bg-gray-300 text-gray-800 max-[400px]:text-xs max-[400px]:px-2 px-4 py-2 rounded-md float-right" onClick={() => setDeleteAllClicked(false)}> CANCEL </button>
                     </div>
                 </div>
             </div>
