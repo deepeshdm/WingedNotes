@@ -57,21 +57,21 @@ export default function ActionButtons() {
     return (
         <>
             <div onClick={() => router.push("/change_password")}
-                className="flex items-end justify-center py-4 px-5 mt-3 rounded-md bg-sky-500 hover:bg-sky-600 active:bg-sky-700 cursor-pointer select-none">
-                <span className='text-white text-base font-semibold'> CHANGE PASSWORD </span>
-                <span className="ml-3"> <FaKey className='w-6 h-6 text-white' /> </span>
+                className="flex items-end justify-center py-4 px-5 mt-3 rounded-md bg-sky-500 hover:bg-sky-600 active:bg-sky-700 cursor-pointer select-none whitespace-nowrap">
+                <span className='text-white text-base font-semibold max-[400px]:text-sm'> CHANGE PASSWORD </span>
+                <span className="ml-3"> <FaKey className='max-[400px]:w-4 max-[400px]:h-4 w-6 h-6 text-white' /> </span>
             </div>
 
             <div onClick={() => router.push("/delete_account")}
-                className="flex items-end justify-center py-4 px-5 rounded-md bg-red-500 hover:bg-red-600 active:bg-red-700 cursor-pointer select-none">
-                <span className='text-white text-base font-semibold'> DELETE ACCOUNT </span>
-                <span className="ml-3"> <MdDelete className='w-6 h-6 text-white' /> </span>
+                className="flex items-end justify-center py-4 px-5 rounded-md bg-red-500 hover:bg-red-600 active:bg-red-700 cursor-pointer select-none whitespace-nowrap">
+                <span className='text-white text-base font-semibold max-[400px]:text-sm'> DELETE ACCOUNT </span>
+                <span className="ml-3"> <MdDelete className='max-[400px]:w-4 max-[400px]:h-4 w-6 h-6 text-white' /> </span>
             </div>
 
             <div onClick={() => setButtonActive(true)}
-                className={`flex items-end justify-center py-4 px-5 rounded-md bg-indigo-500 hover:bg-indigo-600 ${buttonActive ? "bg-red-700" : "active:bg-indigo-700"} cursor-pointer select-none`}>
-                <span className='text-white text-base font-semibold'> LOGOUT </span>
-                <span className="ml-3"> <IoLogOut className='w-6 h-6 text-white' /> </span>
+                className={`flex items-end justify-center py-4 px-5 rounded-md bg-indigo-500 hover:bg-indigo-600 ${buttonActive ? "bg-red-700" : "active:bg-indigo-700"} cursor-pointer select-none whitespace-nowrap`}>
+                <span className='text-white text-base font-semibold max-[400px]:text-sm'> LOGOUT </span>
+                <span className="ml-3"> <IoLogOut className='max-[400px]:w-4 max-[400px]:h-4 w-6 h-6 text-white' /> </span>
             </div>
 
             {buttonActive &&

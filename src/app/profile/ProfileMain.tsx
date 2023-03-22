@@ -84,17 +84,18 @@ export default function ProfileMain({ LoggedInUser, userDoc }: ProfileProps) {
 
             <div className="bg-gray-900 min-h-screen">
 
-                <div className='flex flex-col items-center max-sm:pt-5'>
-                    <FaUser className='text-white mb-3 w-7 h-7' />
-                    <p className='text-2xl mb-8 font-semibold text-white'> Account Details </p>
+                <div className='flex flex-col items-center max-md:pt-7'>
+                    <FaUser className='text-white mb-3 max-[450px]:w-5 max-[450px]:h-5 w-7 h-7' />
+                    <p className='max-[450px]:text-xl text-2xl max-md:mb-5 mb-8 font-semibold text-white'> Account Details </p>
                 </div>
 
-                <div className="pb-20 flex flex-col gap-y-3 mx-20 sm:mx-32 lg:mx-44 min-[1200px]:mx-72 xl:mx-96
+                <div className="pb-20 flex flex-col gap-y-3 max-[500px]:mx-14 mx-24 sm:mx-36 lg:mx-44 min-[1200px]:mx-72 xl:mx-96
                 md:grid md:grid-cols-2 md:gap-x-12 md:gap-y-6 ">
                     <UserFields Firstname={userDoc?.Firstname} Lastname={userDoc?.Lastname} OnChangeHandler={handleInputChange}
                         Username={userDoc?.Username} socialMediaLink={userDoc?.socialMediaLink} />
                     <button disabled={disableButton} onClick={UpdateInputFields}
-                        className="bg-sky-500 text-white font-bold px-14 py-4 mt-3 rounded-md hover:bg-sky-600 active:bg-sky-700 disabled:opacity-50 disabled:cursor-not-allowed">
+                        className="bg-sky-500 text-white font-bold px-14 py-4 mt-3 rounded-md hover:bg-sky-600 active:bg-sky-700 
+                        max-[400px]:text-sm disabled:opacity-50 disabled:cursor-not-allowed">
                         UPDATE
                     </button>
                     <ActionButtons />
