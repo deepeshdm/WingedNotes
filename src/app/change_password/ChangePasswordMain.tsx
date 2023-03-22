@@ -106,14 +106,14 @@ export default function ChangePasswordMain() {
 
             <div className="bg-gray-900 min-h-screen pt-7 flex flex-col items-center">
 
-                <FaLock className='text-white mb-3 w-7 h-7' />
-                <p className='text-2xl mb-8 font-semibold text-white'> Change Account Password </p>
+                <FaLock className='text-white mb-3 max-[450px]:w-5 max-[450px]:h-5 w-7 h-7' />
+                <p className='max-[450px]:text-xl text-2xl mb-8 font-semibold text-white'> Change Account Password </p>
 
                 <div className="flex items-center  bg-slate-800 hover:bg-slate-700 rounded-md mb-5">
                     <RiLockPasswordLine className="ml-3 text-slate-500 h-6 w-6" />
                     <input placeholder="Enter Old Password" type={showOldPassword ? 'text' : 'password'}
                         onChange={(e) => setOldPassword(String(e.target.value))} maxLength={64}
-                        className="bg-transparent w-full pl-3 py-5 text-white focus:outline-none" />
+                        className="bg-transparent max-[450px]:w-3/4 w-full pl-3 py-5 text-white focus:outline-none" />
                     {showOldPassword ?
                         (<RiEyeOffLine className="mr-7 text-slate-500 h-7 w-7 cursor-pointer" onClick={() => setShowOldPassword(false)} />) :
                         (<RiEyeLine className="mr-7 text-slate-500 h-7 w-7 cursor-pointer" onClick={() => setShowOldPassword(true)} />)
@@ -125,7 +125,7 @@ export default function ChangePasswordMain() {
                     <RiLockPasswordLine className="ml-3 text-slate-500 h-6 w-6" />
                     <input placeholder="Enter New Password" type={showNewPassword ? 'text' : 'password'}
                         onChange={(e) => setNewPassword(String(e.target.value))} maxLength={64}
-                        className="bg-transparent w-full pl-3 py-5 text-white focus:outline-none" />
+                        className="bg-transparent max-[450px]:w-3/4 w-full pl-3 py-5 text-white focus:outline-none" />
                     {showNewPassword ?
                         (<RiEyeOffLine className="mr-7 text-slate-500 h-7 w-7 cursor-pointer" onClick={() => setShowNewPassword(false)} />) :
                         (<RiEyeLine className="mr-7 text-slate-500 h-7 w-7 cursor-pointer" onClick={() => setShowNewPassword(true)} />)
@@ -137,7 +137,7 @@ export default function ChangePasswordMain() {
                     <RiLockPasswordLine className="ml-3 text-slate-500 h-6 w-6" />
                     <input placeholder="Confirm New Password" type={showNewPassword ? 'text' : 'password'}
                         onChange={(e) => setConfirmNewPassword(String(e.target.value))} maxLength={64}
-                        className="bg-transparent w-full pl-3 py-5 text-white focus:outline-none" />
+                        className="bg-transparent max-[450px]:w-3/4 w-full pl-3 py-5 text-white focus:outline-none" />
                     {showNewPassword ?
                         (<RiEyeOffLine className="mr-7 text-slate-500 h-7 w-7 cursor-pointer" onClick={() => setShowNewPassword(false)} />) :
                         (<RiEyeLine className="mr-7 text-slate-500 h-7 w-7 cursor-pointer" onClick={() => setShowNewPassword(true)} />)
@@ -146,7 +146,7 @@ export default function ChangePasswordMain() {
 
 
                 <button onClick={ChangePassword}
-                    className="bg-sky-500 text-white text-md font-bold px-14 py-4 mt-3 rounded-md hover:bg-sky-600 active:bg-sky-700">
+                    className="bg-sky-500 text-white text-md font-bold max-[450px]:px-10 px-14 py-4 mt-3 rounded-md hover:bg-sky-600 active:bg-sky-700">
                     CHANGE PASSWORD </button>
 
             </div>
