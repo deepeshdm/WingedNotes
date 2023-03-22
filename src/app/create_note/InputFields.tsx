@@ -42,7 +42,7 @@ export const TitleInput = ({ noteData, setNoteData, children, setDisableUpdateBu
             </div>
 
             {children}
-            <span className="ml-6 max-[500px]:ml-3">
+            <span className="ml-6 max-[350px]:ml-0 max-[500px]:ml-3">
                 <MdDelete onClick={deleteIconHandler} className='w-9 h-10 text-red-500 hover:text-red-600 active:text-red-500' />
             </span>
         </div>
