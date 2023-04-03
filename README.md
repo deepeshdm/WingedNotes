@@ -30,7 +30,7 @@ cd WingedNotes
 npm install
 ```
 
-3. Configure Firestore database on Firebase and set configs as Environment Variables.
+3. Configure Firestore database on Firebase and set configs as Environment Variables in Nextjs app
 ```
 # .env.local
 
